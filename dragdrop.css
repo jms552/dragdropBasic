@@ -1,0 +1,195 @@
+body {
+  font-size: 10px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+/* 
+  edx only gives us a max width of 712px to work with, on a Mac laptop. 
+  we can shrink text & em-based content from here.
+*/
+#problem-container { 
+  width: calc(100% - 1em);
+  margin: 1;
+  font-size: calc((1vw + 1.5vh)/2);
+}
+
+.screeningtool, #options {
+  border: 2px dotted #ccc;
+  border-radius: 0.5em;
+  margin: 1;
+  position: relative;
+}
+
+.screeningtool {
+  height: calc(20vh - 11.5em);
+  text-align: left;
+}
+.screeningtool > h2 {
+  text-align: center;
+  width: 100%;
+}
+#options {
+  margin-top: 1em;
+  height: calc(25vh - 2em);
+}
+
+#options:before {
+  display: block;
+  content: attr(id);
+  text-transform: capitalize;
+  margin: -0.625em auto;
+  font-size: 0.75em;
+  font-weight: bold;
+  width: 6.25vw;
+  color: #666;
+  background-color: white;
+}
+
+.screeningtool > span {
+  background-color: #ddd;
+  display: inline-block;
+  top: 0em;
+  white-space: normal;
+  padding: 0 0.25em;
+  margin: 0 0.25em;
+  border-radius: 0.5em;
+  line-height: 2em;
+  font-size: .995em;
+  /* cue up fade out */
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  -ms-transition: opacity 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+#options {
+  width: 100%;
+  top: 1em;
+  height: calc(100% - 1.25em);
+  position: inherit;
+}
+
+#options:before {
+  height: 0.6em;
+}
+
+#options:hover
+#options.hovered {
+  border-color: #999;
+}
+
+#options:hover:before
+#options.hovered:before {
+  color: white;
+}
+
+
+#options:before {
+  margin: -1.25em auto 1em auto;
+}
+
+.screeningtool {
+  margin: 1em;
+}
+.screeningtool#screeningtool1{
+  background-color: #774286;
+  border-color: #774286;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+.screeningtool#screeningtool2{
+  background-color: #015C8D;
+  border-color: #015C8D;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+.screeningtool#screeningtool3{
+  background-color: #73A532;
+  border-color: #73A532;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+.screeningtool#screeningtool4{
+  background-color: #009D9D;
+  border-color: #009D9D;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+.screeningtool#screeningtool5{
+  background-color: #EEA21F;
+  border-color: #EEA21F;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+.screeningtool#screeningtool6{
+  background-color: #CF3432;
+  border-color: #CF3432;
+  font-weight: bold;
+  font-variant: small-caps;
+  }
+
+
+
+
+#options span,
+span.clone {
+  display: inline-block;
+  color: #999;
+  background-color: #efefef;
+  border-radius: 0.5em;
+  margin: 0.5em;
+  padding: 0.0222 em 0.25em;
+  /* cue up fade out */
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  -ms-transition: opacity 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+#options {
+	text-align: center;
+}
+#options span {
+	width: 50%;
+  height: 3vh;
+}
+
+#options span.fading,
+span.clone.fading {
+  opacity: 0;
+}
+
+#options span:hover,
+span.dragging {
+  color: black;
+  background-color: #ddd;
+}
+
+.dragging {
+  position: absolute;
+}
+
+.droptarget.drop-active {
+  border-color: #aaa;
+}
+
+.droptarget.drop-target {
+  border-color: #fff;
+  border-style: solid;
+}
+
+.droptarget {
+	padding: 0 1em;
+}
+
+.droptarget > h2 {
+	margin-bottom: 0;
+}
+
+.well.can-drop{
+  color: #000;
+
+}
+
